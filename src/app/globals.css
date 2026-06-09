@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+/* Enable class-based dark mode (next-themes toggles `.dark` on <html>) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #fafafa;
+  --background-soft: #f1f1f4;
+  --foreground: #0b0b12;
+  --muted: #545b6b;
+  --card: rgba(255, 255, 255, 0.72);
+  --card-border: rgba(11, 11, 18, 0.08);
+  --accent: #6d5efc;
+  --accent-2: #c026d3;
+  --accent-3: #0ea5e9;
+}
+
+.dark {
+  --background: #07070b;
+  --background-soft: #0e0e15;
+  --foreground: #ededf2;
+  --muted: #9098ad;
+  --card: rgba(255, 255, 255, 0.035);
+  --card-border: rgba(255, 255, 255, 0.09);
+  --accent: #8b7dff;
+  --accent-2: #e248ff;
+  --accent-3: #38bdf8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-soft: var(--background-soft);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-border: var(--card-border);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-accent-3: var(--accent-3);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 35%, transparent);
+  color: var(--foreground);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--muted) 35%, transparent);
+  border-radius: 999px;
+  border: 2px solid var(--background);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* ---------- Helper classes ---------- */
+
+.text-gradient {
+  background: linear-gradient(
+    110deg,
+    var(--accent) 0%,
+    var(--accent-2) 50%,
+    var(--accent-3) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradient-pan 6s linear infinite;
+}
+
+.glass {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Subtle grid backdrop with a radial fade */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, var(--card-border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--card-border) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+}
+
+/* Animated gradient border wrapper */
+.gradient-border {
+  position: relative;
+  background: var(--background);
+  border-radius: inherit;
+}
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--accent), transparent 40%, transparent 60%, var(--accent-2));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Floating blobs in the hero */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  will-change: transform;
+}
+
+/* ---------- Keyframes ---------- */
+
+@keyframes gradient-pan {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes blob-float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(40px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-30px, 20px) scale(0.95);
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blob { animation: blob-float 16s ease-in-out infinite; }
+.cursor-blink { animation: blink 1s step-end infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
