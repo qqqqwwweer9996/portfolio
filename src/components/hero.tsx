@@ -5,6 +5,7 @@ import {
   motion,
   useMotionValue,
   useMotionTemplate,
+  type Variants,
 } from "framer-motion";
 import { ArrowDown, ArrowUpRight, FileText, MapPin } from "lucide-react";
 import { profile, socials, techStack } from "@/lib/data";
@@ -45,11 +46,11 @@ function useTypewriter(
   return sub;
 }
 
-const container = {
+const container: Variants = {
   hidden: {},
   show: { transition: { staggerChildren: 0.08, delayChildren: 0.1 } },
 };
-const item = {
+const item: Variants = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] } },
 };
