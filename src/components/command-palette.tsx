@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
 import {
   CornerDownLeft,
-  Copy,
   FileText,
   Hash,
   Moon,
@@ -57,16 +56,6 @@ export function CommandPalette() {
             <Moon className="h-4 w-4" />
           ),
         run: () => setTheme(resolvedTheme === "dark" ? "light" : "dark"),
-      },
-      {
-        id: "copy-email",
-        label: "이메일 주소 복사",
-        group: "액션",
-        icon: <Copy className="h-4 w-4" />,
-        run: () => {
-          navigator.clipboard?.writeText(profile.email);
-          setOpen(false);
-        },
       },
       {
         id: "resume",

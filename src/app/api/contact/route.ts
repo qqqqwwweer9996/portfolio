@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { Resend } from "resend";
-import { profile } from "@/lib/data";
 
 // Validate the incoming payload (same Zod approach used in the cafe-menu-api).
 const schema = z.object({
@@ -30,12 +29,13 @@ export async function POST(request: Request) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) {
+  const toEmail = process.env.CONTACT_TO_EMAIL;
+  if (!apiKey || !toEmail) {
     console.error(
-      "[contact] RESEND_API_KEY가 없습니다. .env.local에 키를 넣고 dev 서버를 재시작하세요.",
+      "[contact] RESEND_API_KEY 또는 CONTACT_TO_EMAIL이 없습니다. .env.local에 넣고 dev 서버를 재시작하세요.",
     );
     return NextResponse.json(
-      { ok: false, error: "메일 서비스가 아직 설정되지 않았어요. (서버에 API 키 필요)" },
+      { ok: false, error: "메일 서비스가 아직 설정되지 않았어요. (서버 환경변수 필요)" },
       { status: 503 },
     );
   }
@@ -46,7 +46,7 @@ export async function POST(request: Request) {
   try {
     const { error } = await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
-      to: profile.email,
+      to: toEmail,
       replyTo: email, // 답장하면 보낸 사람에게 바로 감
       subject: `[포트폴리오] ${name}님의 메시지`,
       text: `이름: ${name}\n이메일: ${email}\n\n${message}`,
