@@ -82,8 +82,8 @@ export function Projects() {
                   </span>
                 )}
 
-                {/* Hover overlay */}
-                <div className="absolute inset-0 flex items-center justify-center gap-3 bg-black/45 opacity-0 backdrop-blur-[2px] transition-opacity duration-300 group-hover:opacity-100">
+                {/* Hover overlay (desktop only — touch devices use the links in the card body) */}
+                <div className="absolute inset-0 hidden items-center justify-center gap-3 bg-black/45 opacity-0 backdrop-blur-[2px] transition-opacity duration-300 group-hover:opacity-100 lg:flex">
                   <a
                     href={p.demoUrl}
                     target="_blank"
@@ -122,6 +122,26 @@ export function Projects() {
                       {t}
                     </span>
                   ))}
+                </div>
+
+                {/* Touch-accessible links (desktop uses the hover overlay above) */}
+                <div className="mt-4 flex gap-4 lg:hidden">
+                  <a
+                    href={p.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent"
+                  >
+                    <ExternalLink className="h-4 w-4" /> Live
+                  </a>
+                  <a
+                    href={p.repoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-muted"
+                  >
+                    <GithubIcon className="h-4 w-4" /> Code
+                  </a>
                 </div>
               </div>
             </motion.article>
