@@ -16,7 +16,6 @@ export const profile = {
   tagline: "기본기를 탄탄히 다지는 신입 백엔드 개발자",
   bio: "REST API와 풀스택 웹 서비스를 직접 설계하고 만들며 성장 중인 신입 개발자입니다. 보안, 데이터 검증, 그리고 의존성을 최소화한 깔끔한 코드를 지향합니다.",
   location: "Busan, South Korea",
-  email: "sotk8045@gmail.com",
   available: true, // shows the "available for work" badge
   resumeUrl: "#",
 };
@@ -25,7 +24,6 @@ export type SocialKey = "github" | "linkedin" | "twitter" | "mail";
 
 export const socials: { key: SocialKey; label: string; href: string }[] = [
   { key: "github", label: "GitHub", href: "https://github.com/qqqqwwweer9996" },
-  { key: "mail", label: "Email", href: "mailto:sotk8045@gmail.com" },
 ];
 
 export const navLinks = [
