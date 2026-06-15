@@ -18,11 +18,7 @@ export function Contact() {
 
       <Reveal>
         <div className="mx-auto max-w-xl rounded-2xl border border-border bg-card p-8 text-center sm:p-10">
-          <p className="text-base leading-relaxed text-muted">
-            프로젝트 의뢰나 채용 관련 문의는 GitHub로 편하게 연락주세요.
-          </p>
-
-          <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-3">
             {socials.map((s) => (
               <a
                 key={s.key}
