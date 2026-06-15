@@ -103,6 +103,15 @@ export function Navbar() {
             </kbd>
           </button>
 
+          <button
+            type="button"
+            aria-label="Search"
+            onClick={openPalette}
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card text-foreground sm:hidden"
+          >
+            <Search className="h-4 w-4" />
+          </button>
+
           <ThemeToggle />
 
           <button
