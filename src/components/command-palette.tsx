@@ -3,15 +3,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
-import {
-  CornerDownLeft,
-  FileText,
-  Hash,
-  Moon,
-  Search,
-  Sun,
-} from "lucide-react";
-import { navLinks, profile, socials } from "@/lib/data";
+import { CornerDownLeft, Hash, Moon, Search, Sun } from "lucide-react";
+import { navLinks, socials } from "@/lib/data";
 import { SocialIcon } from "./social-icons";
 
 type Item = {
@@ -56,16 +49,6 @@ export function CommandPalette() {
             <Moon className="h-4 w-4" />
           ),
         run: () => setTheme(resolvedTheme === "dark" ? "light" : "dark"),
-      },
-      {
-        id: "resume",
-        label: "이력서 보기",
-        group: "액션",
-        icon: <FileText className="h-4 w-4" />,
-        run: () => {
-          window.open(profile.resumeUrl, "_blank");
-          setOpen(false);
-        },
       },
     ];
 

@@ -22,7 +22,7 @@ export function Projects() {
       <SectionHeading
         eyebrow="Work"
         title="프로젝트"
-        subtitle="제가 만들고 다듬은 작업물 일부입니다."
+        subtitle="직접 설계하고 만든 작업물입니다. 비슷한 서비스가 필요하시면 같은 수준으로 만들어 드립니다."
       />
 
       <div className="mb-10 flex flex-wrap justify-center gap-2">
