@@ -31,10 +31,10 @@ function Counter({ to, suffix }: { to: number; suffix: string }) {
 }
 
 const highlights = [
-  { icon: ShieldCheck, title: "보안 설계", text: "RLS · 서버 검증 3중 방어" },
-  { icon: BadgeCheck, title: "입력 검증", text: "Zod 스키마 기반 검증" },
-  { icon: Server, title: "REST API", text: "필터 · 정렬 · 페이지네이션" },
-  { icon: Code, title: "탄탄한 기본기", text: "외부 의존성 최소화 지향" },
+  { icon: ShieldCheck, title: "보안 · 권한 설계", text: "허가된 사용자만 접근하도록" },
+  { icon: BadgeCheck, title: "입력값 검증", text: "잘못된 데이터로 안 깨지게" },
+  { icon: Server, title: "REST API 개발", text: "검색 · 정렬 · 페이지네이션" },
+  { icon: Code, title: "끝까지 책임", text: "기획부터 납품 · 수정까지" },
 ];
 
 export function About() {
@@ -49,16 +49,18 @@ export function About() {
       <div className="grid items-start gap-10 lg:grid-cols-2">
         <Reveal className="space-y-5 text-base leading-relaxed text-muted">
           <p>
-            저는 REST API와 풀스택 웹을 직접 만들며 성장 중인{" "}
-            <span className="font-semibold text-foreground">신입 개발자</span>
-            입니다. 화면부터 데이터베이스까지, 하나의 기능이 끝까지 동작하게
-            만드는 과정을 좋아합니다.
+            저는 화면(프론트엔드)부터 데이터베이스(백엔드)까지,{" "}
+            <span className="font-semibold text-foreground">
+              하나의 서비스를 처음부터 끝까지
+            </span>{" "}
+            직접 만듭니다. 외주를 맡기실 때 가장 중요한, 제대로 동작하고 끝까지
+            책임지는 결과물을 지향합니다.
           </p>
           <p>
             특히{" "}
             <span className="font-semibold text-foreground">보안과 데이터 검증</span>
-            에 신경 씁니다. Row Level Security로 권한을 지키고, Zod로 입력을
-            검증하며, 의존성을 최소화한 깔끔한 코드를 지향합니다.
+            에 신경 씁니다. 허가받지 않은 접근을 막고, 잘못된 입력으로 서비스가
+            깨지지 않도록 꼼꼼하게 처리해 안심하고 맡길 수 있는 코드를 만듭니다.
           </p>
 
           <div className="grid gap-3 pt-2 sm:grid-cols-2">

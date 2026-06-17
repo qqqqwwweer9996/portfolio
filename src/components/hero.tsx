@@ -7,7 +7,7 @@ import {
   useMotionTemplate,
   type Variants,
 } from "framer-motion";
-import { ArrowDown, ArrowUpRight, FileText, MapPin } from "lucide-react";
+import { ArrowDown, ArrowUpRight, MapPin } from "lucide-react";
 import { profile, socials, techStack } from "@/lib/data";
 import { SocialIcon } from "./social-icons";
 
@@ -97,7 +97,7 @@ export function Hero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
               </span>
-              새로운 프로젝트 환영합니다
+              외주 · 프로젝트 의뢰 환영합니다
             </span>
           </motion.div>
         )}
@@ -138,20 +138,14 @@ export function Hero() {
             href="#projects"
             className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-accent-2 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-accent/25 transition-transform hover:scale-[1.03]"
           >
-            프로젝트 보기
+            작업물 보기
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
           <a
-            href="#contact"
+            href="#services"
             className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-accent hover:text-accent"
           >
-            연락하기
-          </a>
-          <a
-            href={profile.resumeUrl}
-            className="inline-flex items-center gap-2 rounded-full px-4 py-3 text-sm font-medium text-muted transition-colors hover:text-foreground"
-          >
-            <FileText className="h-4 w-4" /> 이력서
+            제공 서비스
           </a>
         </motion.div>
 

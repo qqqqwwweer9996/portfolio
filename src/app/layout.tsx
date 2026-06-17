@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: `${profile.name} — ${profile.roles[0]}`,
   description: profile.bio,
-  keywords: ["portfolio", "developer", "frontend", profile.name],
+  keywords: ["포트폴리오", "웹 개발", "백엔드 개발", "REST API", "외주 개발", profile.name],
   authors: [{ name: profile.name }],
   openGraph: {
     title: `${profile.name} — ${profile.roles[0]}`,
