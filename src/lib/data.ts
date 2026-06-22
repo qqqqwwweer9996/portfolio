@@ -84,7 +84,7 @@ export type Project = {
   title: string;
   description: string;
   tags: string[];
-  category: "Web App" | "API";
+  category: "Web App" | "API" | "Website";
   year: string;
   gradient: string; // tailwind gradient classes for the cover
   emoji: string;
@@ -120,9 +120,22 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/qqqqwwweer9996/cafe-menu-api",
     featured: true,
   },
+  {
+    title: "Wave Coffee — 카페 원페이지",
+    description:
+      "가상의 광안리 카페를 위해 만든 반응형 원페이지 샘플입니다. 메뉴·매장 소개·오시는 길·문의까지 소상공인 매장에 필요한 구성을 한 페이지에 담았습니다. 카페·음식점·공방 등 업종에 맞춰 제작해 드립니다.",
+    tags: ["HTML", "CSS", "반응형", "샘플"],
+    category: "Website",
+    year: "2026",
+    gradient: "from-amber-700 via-amber-600 to-stone-700",
+    emoji: "🌊",
+    demoUrl: "https://qqqqwwweer9996.github.io/cafe-example/",
+    repoUrl: "https://github.com/qqqqwwweer9996/cafe-example",
+    featured: false,
+  },
 ];
 
-export const projectCategories = ["All", "Web App", "API"] as const;
+export const projectCategories = ["All", "Web App", "API", "Website"] as const;
 
 export type Service = {
   key: "web" | "api" | "improve";
