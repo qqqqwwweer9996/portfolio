@@ -129,7 +129,7 @@ export const projects: Project[] = [
     year: "2026",
     gradient: "from-amber-700 via-amber-600 to-stone-700",
     emoji: "🌊",
-    demoUrl: "https://qqqqwwweer9996.github.io/cafe-example/",
+    demoUrl: "https://cafe-example-nine.vercel.app/",
     repoUrl: "https://github.com/qqqqwwweer9996/cafe-example",
     featured: false,
   },
