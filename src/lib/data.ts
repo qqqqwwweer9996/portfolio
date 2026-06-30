@@ -38,7 +38,7 @@ export const navLinks = [
 
 // Honest, project-derived numbers — no inflated claims.
 export const stats = [
-  { value: 2, suffix: "", label: "완성한 프로젝트" },
+  { value: 4, suffix: "", label: "완성한 프로젝트" },
   { value: 10, suffix: "+", label: "구현한 API 엔드포인트" },
   { value: 7, suffix: "", label: "직접 만든 화면" },
   { value: 100, suffix: "%", label: "직접 개발" },
