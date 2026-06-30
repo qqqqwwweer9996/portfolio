@@ -121,6 +121,19 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: "APEXFIT — 헬스장 랜딩 페이지",
+    description:
+      "스크롤 인터랙션과 60fps 애니메이션에 집중한 헬스장 랜딩 페이지입니다. 스크롤 패럴랙스, 섹션 등장 효과, 요금제 선택부터 결제 확인 플로우까지 부드러운 사용자 경험을 직접 구현했습니다. 헬스장·브랜드·매장처럼 첫인상이 중요한 소개 페이지를 감각적으로 만들어 드립니다.",
+    tags: ["Next.js", "TypeScript", "Framer Motion", "Tailwind"],
+    category: "Website",
+    year: "2026",
+    gradient: "from-lime-400 via-green-500 to-emerald-600",
+    emoji: "🏋️",
+    demoUrl: "https://gym-landing-tan.vercel.app/",
+    repoUrl: "https://github.com/qqqqwwweer9996/gym-landing",
+    featured: true,
+  },
+  {
     title: "Wave Coffee — 카페 원페이지",
     description:
       "가상의 광안리 카페를 위해 만든 반응형 원페이지 샘플입니다. 메뉴·매장 소개·오시는 길·문의까지 소상공인 매장에 필요한 구성을 한 페이지에 담았습니다. 카페·음식점·공방 등 업종에 맞춰 제작해 드립니다.",
