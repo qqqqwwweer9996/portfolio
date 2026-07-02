@@ -92,14 +92,16 @@ export function Projects() {
                   >
                     <ExternalLink className="h-3.5 w-3.5" /> Live
                   </a>
-                  <a
-                    href={p.repoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 rounded-full border border-white/40 bg-white/10 px-3.5 py-2 text-xs font-semibold text-white transition-transform hover:scale-105"
-                  >
-                    <GithubIcon className="h-3.5 w-3.5" /> Code
-                  </a>
+                  {p.repoUrl && (
+                    <a
+                      href={p.repoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-full border border-white/40 bg-white/10 px-3.5 py-2 text-xs font-semibold text-white transition-transform hover:scale-105"
+                    >
+                      <GithubIcon className="h-3.5 w-3.5" /> Code
+                    </a>
+                  )}
                 </div>
               </div>
 
@@ -134,14 +136,16 @@ export function Projects() {
                   >
                     <ExternalLink className="h-4 w-4" /> Live
                   </a>
-                  <a
-                    href={p.repoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-muted"
-                  >
-                    <GithubIcon className="h-4 w-4" /> Code
-                  </a>
+                  {p.repoUrl && (
+                    <a
+                      href={p.repoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-muted"
+                    >
+                      <GithubIcon className="h-4 w-4" /> Code
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.article>

@@ -38,9 +38,9 @@ export const navLinks = [
 
 // Honest, project-derived numbers — no inflated claims.
 export const stats = [
-  { value: 4, suffix: "", label: "완성한 프로젝트" },
-  { value: 10, suffix: "+", label: "구현한 API 엔드포인트" },
-  { value: 7, suffix: "", label: "직접 만든 화면" },
+  { value: 5, suffix: "", label: "완성한 프로젝트" },
+  { value: 11, suffix: "+", label: "구현한 API 엔드포인트" },
+  { value: 8, suffix: "", label: "직접 만든 화면" },
   { value: 100, suffix: "%", label: "직접 개발" },
 ];
 
@@ -94,6 +94,19 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    title: "Seoul Pulse — 서울 실시간 데이터 아트",
+    description:
+      "서울 지하철 9개 노선의 실제 열차 250여 대와 실시간 날씨를 한 화면에 그리는 인터랙티브 데이터 아트입니다. 서울시 공공 API 연동, Canvas 애니메이션(열차 흐름·비·눈·번개), 장애 시 자동 폴백까지 직접 설계했습니다. 실시간 대시보드·데이터 시각화가 필요할 때 이 수준으로 만들어 드립니다.",
+    tags: ["Next.js", "TypeScript", "Canvas", "공공데이터 API"],
+    category: "Web App",
+    year: "2026",
+    gradient: "from-cyan-400 via-blue-600 to-indigo-950",
+    emoji: "🚇",
+    demoUrl: "https://seoul-pulse-beta.vercel.app/",
+    repoUrl: "",
+    featured: true,
+  },
   {
     title: "강원도 소상공인 후기 게시판",
     description:
