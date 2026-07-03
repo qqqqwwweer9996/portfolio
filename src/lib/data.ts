@@ -108,6 +108,19 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: "APEXFIT — 헬스장 랜딩 페이지",
+    description:
+      "스크롤 인터랙션과 60fps 애니메이션에 집중한 헬스장 랜딩 페이지입니다. 스크롤 패럴랙스, 섹션 등장 효과, 요금제 선택부터 결제 확인 플로우까지 부드러운 사용자 경험을 직접 구현했습니다. 헬스장·브랜드·매장처럼 첫인상이 중요한 소개 페이지를 감각적으로 만들어 드립니다.",
+    tags: ["Next.js", "TypeScript", "Framer Motion", "Tailwind"],
+    category: "Website",
+    year: "2026",
+    gradient: "from-lime-400 via-green-500 to-emerald-600",
+    emoji: "🏋️",
+    demoUrl: "https://gym-landing-tan.vercel.app/",
+    repoUrl: "https://github.com/qqqqwwweer9996/gym-landing",
+    featured: true,
+  },
+  {
     title: "강원도 소상공인 후기 게시판",
     description:
       "회원가입·로그인, 글 작성, 이미지 업로드, 실시간 검색까지 갖춘 풀스택 웹 서비스입니다. 회원만 글을 쓰고 본인 글만 수정·삭제하도록 권한과 보안을 직접 설계했습니다. 커뮤니티·예약·리뷰형 사이트에 그대로 응용할 수 있습니다.",
@@ -131,19 +144,6 @@ export const projects: Project[] = [
     emoji: "☕",
     demoUrl: "https://cafe-menu-api-lchp.onrender.com/api-docs",
     repoUrl: "https://github.com/qqqqwwweer9996/cafe-menu-api",
-    featured: true,
-  },
-  {
-    title: "APEXFIT — 헬스장 랜딩 페이지",
-    description:
-      "스크롤 인터랙션과 60fps 애니메이션에 집중한 헬스장 랜딩 페이지입니다. 스크롤 패럴랙스, 섹션 등장 효과, 요금제 선택부터 결제 확인 플로우까지 부드러운 사용자 경험을 직접 구현했습니다. 헬스장·브랜드·매장처럼 첫인상이 중요한 소개 페이지를 감각적으로 만들어 드립니다.",
-    tags: ["Next.js", "TypeScript", "Framer Motion", "Tailwind"],
-    category: "Website",
-    year: "2026",
-    gradient: "from-lime-400 via-green-500 to-emerald-600",
-    emoji: "🏋️",
-    demoUrl: "https://gym-landing-tan.vercel.app/",
-    repoUrl: "https://github.com/qqqqwwweer9996/gym-landing",
     featured: true,
   },
   {
